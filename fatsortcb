@@ -1,0 +1,4 @@
+sudo dd if=/dev/sda1 of=~/usb.img status=progress
+sudo chown $USER:$USER ~/usb.img
+fatsort ~/usb.img
+sudo dd if=~/usb.img of=/dev/sda1 status=progress && sync
